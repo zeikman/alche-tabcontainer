@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>alche-tabcontainer Tests</title>
+  <script src="../../webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../alche-tabcontainer.html">
+
+</head>
+<body>
+
+  <alche-tabcontainer id="tabcontaine">
+    <div title="Title 1">Content 1</div>
+    <div title="Title 2">Content 2</div>
+    <div title="Title 3">Content 3</div>
+    <div title="Title 4">Content 4</div>
+    <div title="Title 5">Content 5</div>
+  </alche-tabcontainer>
+
+  <script>
+    var element = document.getElementById('tabcontainer');
+
+    suite('Element alche-tabcontainer', function() {
+
+      // Test to see if the element is building properly
+      test('Define alche-tabcontainer element', function() {
+          assert.isDefined(element, "Element alche-tabcontainer should not be undefined !");
+      });
+
+    });
+  </script>
+
+</body>
+</html>

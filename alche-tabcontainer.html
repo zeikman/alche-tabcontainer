@@ -1,0 +1,88 @@
+<link rel="import" href="../bower_components/iron-a11y-keys/iron-a11y-keys.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+
+<dom-module id="alche-tabcontainer">
+  <style>
+    :host {
+      display: block;
+
+        /* paper-tabs */
+      /* --- css violation start --- */
+      --paper-tabs-selection-bar: {
+        height: 5px;
+      };
+      /* --- css violation end --- */
+      --paper-tabs-selection-bar-color: var(--alche-tabcontainer-selection-bar-color, #cccceb);
+      --paper-tabs: {
+        background-color: #3f51b5;
+        color: #fff;
+        @apply(--alche-tabcontainer-tabs);
+      };
+
+        /* paper-tab */
+      --paper-tab-ink: var(--alche-tabcontainer-tab-ink, #cccceb);
+      --paper-tab: var(--alche-tabcontainer-tab);
+      --paper-tab-content: var(--alche-tabcontainer-tab-content);
+
+        /* alche-tabcontainer */
+      @apply(--alche-tabcontainer);
+    }
+      /* iron-pages */
+    iron-pages {
+      border: 2px solid #3f51b5;
+      border-top: 0 none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+      padding: 5px;
+
+        /* alche-tabcontainer-content */
+      @apply(--alche-tabcontainer-content);
+    }
+  </style>
+  <template>
+    <paper-tabs selected="{{selected}}" scrollable id="paperTabs">
+      <template is="dom-repeat" items="{{items}}">
+        <!-- <paper-tab on-keydown="onKeydown">{{item}}</paper-tab> -->
+        <paper-tab>{{item}}</paper-tab>
+      </template>
+    </paper-tabs>
+    <iron-a11y-keys target="{{item in items}}" keys="enter" on-keys-pressed="onEnter"></iron-a11y-keys>
+
+    <iron-pages selected="{{selected}}">
+      <content></content>
+    </iron-pages>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "alche-tabcontainer",
+    properties: {
+      selected: {
+        type: Number,
+        value: 0,
+        notify: true
+      },
+      items: {
+        type: Array,
+        notify: true
+      }
+    },
+    onKeydown: function(evt, a, b) {
+      console.log(evt);
+      console.log(a);
+      console.log(b);
+      getEvt = evt;
+    },
+    onEnter: function(evt, object) {
+      var paperTabList = Polymer.dom(this.$$('paper-tabs')).querySelectorAll('paper-tab'),
+          enteredTab = evt.explicitOriginalTarget;
+      this.$.paperTabs.select(paperTabList.indexOf(enteredTab));
+    },
+    ready: function() {
+      this.items = Polymer.dom(this).querySelectorAll('div[title]').map(function(object) {
+        return object.title;
+      });
+    }
+  });
+</script>
