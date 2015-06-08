@@ -6,7 +6,13 @@
     "Zeik Tan Yong Xiang <zeikxiang@gmail.com>"
   ],
   "description": "An element combine of polymer 'paper-tabs' and 'iron-pages' to implement 'dijit/layout/TabContainer' behavior like from dojotollkit",
-  "main": "alche-tabcontainer.html",
+  "main": [
+    "alche-tabcontainer.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeikman/alche-tabcontainer"
+  },
   "keywords": [
     "polymer",
     "web-component",
@@ -24,10 +30,11 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
     "paper-tabs": "polymerelements/paper-tabs#^1.0.0",
-    "iron-pages": "polymerelements/iron-pages#^1.0.0",
-    "iron-a11y-keys": "polymerelements/iron-a11y-keys#^1.0.0"
+    "iron-a11y-keys": "polymerelements/iron-a11y-keys#^1.0.0",
+    "iron-pages": "polymerelements/iron-pages#^1.0.0"
   },
   "devDependencies": {
-    "web-component-tester": "*"
+    "web-component-tester": "*",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
   }
 }
