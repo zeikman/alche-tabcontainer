@@ -58,4 +58,8 @@ After that, you can start to use it on your page. Example:
 
 | Properties | Type | Description | Default |
 |-----|-----|-----|-----|
+| noBar | {Boolean} | If true, the bottom bar to indicate the selected tab will not be shown. | false |
+| noink | {Boolean} | If true, ink ripple effect is disabled. | false |
+| noSlide | {Boolean} | If true, the slide effect for the bottom bar is disabled. | false |
+| scrollable | {Boolean} | If true, tabs are scrollable and the tab width is based on the label width. | false |
 | selected | {String} | Gets or sets the selected view. | "0" |
