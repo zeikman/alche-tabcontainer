@@ -63,3 +63,7 @@ After that, you can start to use it on your page. Example:
 | noSlide | {Boolean} | If true, the slide effect for the bottom bar is disabled. | false |
 | scrollable | {Boolean} | If true, tabs are scrollable and the tab width is based on the label width. | false |
 | selected | {String} | Gets or sets the selected view. | "0" |
+
+## Development
+
+The `wct` test case is basically not functioning, I am on da way working on that. Cheers ~
