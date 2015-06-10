@@ -9,7 +9,7 @@ and "[iron-pages](https://elements.polymer-project.org/elements/iron-pages)" to 
 
 ### Installing with Bower
 
-First you need `bower`, refer [bower.io](http://bower.io/) for Bower installation.
+First you need `bower`, if you don't have Bower installed, refer [bower.io](http://bower.io/) for Bower installation.
 
 ```sh
 $ bower install --save alche-tabcontainer
@@ -62,8 +62,15 @@ After that, you can start to use it on your page. Example:
 | noink | {Boolean} | If true, ink ripple effect is disabled. | false |
 | noSlide | {Boolean} | If true, the slide effect for the bottom bar is disabled. | false |
 | scrollable | {Boolean} | If true, tabs are scrollable and the tab width is based on the label width. | false |
-| selected | {String} | Gets or sets the selected view. | "0" |
+| selected | {Number} | Gets or sets the selected view. | "0" |
 
-## Development
+## Unit Testing
 
-The `wct` test case is basically not functioning, I am on da way working on that. Cheers ~
+For unit testing, you need to have `wct` installed on your local machine. Please have a look into 
+[Unit Testing Polymer Elements](https://www.polymer-project.org/0.5/articles/unit-testing-elements.html)
+article to get more details about `wct`.
+
+- The unit testing files are located in the test folder. You can run the test by typing command `wct` from the
+root folder of the element.
+- To add more test cases, you can either write your own suite case and include it in `test/index.html` or, write
+the test cases directly into `test/basic.html`.

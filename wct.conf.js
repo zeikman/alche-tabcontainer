@@ -1,10 +1,9 @@
 module.exports = {
   verbose: true,
   plugins: {
-    local: {
-      browsers: ['firefox']
-    }
+      sauce: {
+         disabled: true,
+         browsers: ['chrome', 'firefox']
+      }
   }
-  // root: 'app',
-  // suites: ['test']
 };

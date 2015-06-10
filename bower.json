@@ -1,6 +1,7 @@
 {
   "name": "alche-tabcontainer",
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "license": "MIT",
   "homepage": "https://github.com/zeikman/alche-tabcontainer",
   "authors": [
     "Zeik Tan Yong Xiang <zeikxiang@gmail.com>"
@@ -19,13 +20,10 @@
     "web-components",
     "tabcontainer"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
@@ -35,6 +33,7 @@
   },
   "devDependencies": {
     "web-component-tester": "*",
-    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.3"
   }
 }
