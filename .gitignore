@@ -2,4 +2,5 @@ node_modules
 test/temp
 bower_components
 .tmp
+.bower.json
 test/bower_components/
